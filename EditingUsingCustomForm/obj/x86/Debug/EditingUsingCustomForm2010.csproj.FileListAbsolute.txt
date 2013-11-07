@@ -16,3 +16,5 @@ C:\Workspace\MyDev\proj\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomF
 C:\Workspace\MyDev\proj\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm2010.csproj.GenerateResource.Cache
 C:\Workspace\MyDev\proj\EditingUsingCustomForm\EditingUsingCustomForm.exe
 C:\Workspace\MyDev\proj\EditingUsingCustomForm\EditingUsingCustomForm.pdb
+E:\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.exe
+E:\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.pdb
