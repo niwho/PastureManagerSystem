@@ -1,0 +1,18 @@
+C:\Program Files\ArcGIS\DeveloperKit10.0\Samples\ArcObjectsNet\EditingUsingCustomForm\CSharp\obj\x86\Debug\EditingUsingCustomForm2010.csprojResolveAssemblyReference.cache
+C:\Program Files\ArcGIS\DeveloperKit10.0\Samples\ArcObjectsNet\EditingUsingCustomForm\CSharp\obj\x86\Debug\EditingUsingCustomForm.MainForm.resources
+C:\Program Files\ArcGIS\DeveloperKit10.0\Samples\ArcObjectsNet\EditingUsingCustomForm\CSharp\obj\x86\Debug\EditingUsingCustomForm.EditorForm.resources
+C:\Program Files\ArcGIS\DeveloperKit10.0\Samples\ArcObjectsNet\EditingUsingCustomForm\CSharp\obj\x86\Debug\EditingUsingCustomForm.Properties.Resources.resources
+C:\Program Files\ArcGIS\DeveloperKit10.0\Samples\ArcObjectsNet\EditingUsingCustomForm\CSharp\obj\x86\Debug\EditingUsingCustomForm2010.csproj.GenerateResource.Cache
+C:\Program Files\ArcGIS\DeveloperKit10.0\Samples\ArcObjectsNet\EditingUsingCustomForm\CSharp\obj\x86\Debug\EditingUsingCustomForm.exe
+C:\Program Files\ArcGIS\DeveloperKit10.0\Samples\ArcObjectsNet\EditingUsingCustomForm\CSharp\obj\x86\Debug\EditingUsingCustomForm.pdb
+C:\Program Files\ArcGIS\DeveloperKit10.0\Samples\ArcObjectsNet\EditingUsingCustomForm\CSharp\EditingUsingCustomForm.exe
+C:\Program Files\ArcGIS\DeveloperKit10.0\Samples\ArcObjectsNet\EditingUsingCustomForm\CSharp\EditingUsingCustomForm.pdb
+C:\Workspace\MyDev\proj\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.exe
+C:\Workspace\MyDev\proj\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.pdb
+C:\Workspace\MyDev\proj\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm2010.csprojResolveAssemblyReference.cache
+C:\Workspace\MyDev\proj\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.MainForm.resources
+C:\Workspace\MyDev\proj\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.EditorForm.resources
+C:\Workspace\MyDev\proj\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.Properties.Resources.resources
+C:\Workspace\MyDev\proj\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm2010.csproj.GenerateResource.Cache
+C:\Workspace\MyDev\proj\EditingUsingCustomForm\EditingUsingCustomForm.exe
+C:\Workspace\MyDev\proj\EditingUsingCustomForm\EditingUsingCustomForm.pdb
