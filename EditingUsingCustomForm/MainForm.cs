@@ -36,10 +36,17 @@ namespace EditingUsingCustomForm
         private IMapControl3 m_mapControl = null;
         #endregion
 
+        [DllImport("User32.dll", EntryPoint = "SendMessage")]
+        private static extern int SendMessage(int hWnd, int Msg, int wParam, int lParam);
+        [DllImport("User32.dll", EntryPoint = "ReleaseCapture")]
+        private static extern int ReleaseCapture();
+
+
         #region class constructor
         public MainForm()
         {
             InitializeComponent();
+            //this.MyFormMouseDown += new MouseEventHandler(panel_title_bar_MouseDown);
         }
         #endregion
 
@@ -131,6 +138,105 @@ namespace EditingUsingCustomForm
         }
 
         #endregion
+        //close
+        private void close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void min_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void close_MouseEnter(object sender, EventArgs e)
+        {
+            this.close.Image = Image.FromFile(@".\images\close_hover.png");
+        }
+
+        private void close_MouseLeave(object sender, EventArgs e)
+        {
+            this.close.Image = Image.FromFile(@".\images\close.png");
+        }
+
+        private void max_MouseEnter(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.max.Image = Image.FromFile(@".\images\max_hover.png");
+            }
+            else
+            {
+                this.max.Image = Image.FromFile(@".\images\yuan_hover.png");
+            }
+        }
+
+        private void max_MouseLeave(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.max.Image = Image.FromFile(@".\images\max.png");
+            }
+            else
+            {
+                this.max.Image = Image.FromFile(@".\images\yuan.png");
+            }
+        }
+
+        private void max_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }else {
+                this.WindowState = FormWindowState.Normal;
+            }
+            
+        }
+
+        private void min_MouseEnter(object sender, EventArgs e)
+        {
+            this.min.Image = Image.FromFile(@".\images\min_hover.png");
+        }
+
+        private void min_MouseLeave(object sender, EventArgs e)
+        {
+            this.min.Image = Image.FromFile(@".\images\min.png");
+        }
+
+        //窗体改变大小时
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            Point min_point = new Point(this.Width - 100,0);
+            this.min.Location = min_point;
+            Point max_point = new Point(this.Width - 70, 0);
+            this.max.Location = max_point;
+            Point close_point = new Point(this.Width - 40, 0);
+            this.close.Location = close_point;
+        }
+
+        private void panel_title_bar_MouseDown(object sender, MouseEventArgs e)
+        {
+                 if (e.Button == MouseButtons.Left){
+                    ReleaseCapture();
+                    SendMessage(this.Handle.ToInt32(), 0x0112, 0xF012, 0);
+                 }
+        }
+
+        private void panel_title_bar_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (e.Clicks == 2) {
+                if (this.WindowState == FormWindowState.Normal)
+                {
+                    this.WindowState = FormWindowState.Maximized;
+                }
+                else
+                {
+                    this.WindowState = FormWindowState.Normal;
+                }
+            }
+     
+        }
 
        
         

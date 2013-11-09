@@ -18,3 +18,13 @@ C:\Workspace\MyDev\proj\EditingUsingCustomForm\EditingUsingCustomForm.exe
 C:\Workspace\MyDev\proj\EditingUsingCustomForm\EditingUsingCustomForm.pdb
 E:\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.exe
 E:\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.pdb
+E:\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.MainForm.resources
+E:\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.EditorForm.resources
+E:\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.Properties.Resources.resources
+E:\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+E:\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+E:\PastureManagerSystem\EditingUsingCustomForm\EditingUsingCustomForm.exe
+E:\PastureManagerSystem\EditingUsingCustomForm\EditingUsingCustomForm.pdb
+E:\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\GenerateResource.write.1.tlog
