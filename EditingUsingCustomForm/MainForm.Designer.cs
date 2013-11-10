@@ -46,7 +46,6 @@ namespace EditingUsingCustomForm
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.axLicenseControl1 = new ESRI.ArcGIS.Controls.AxLicenseControl();
             this.axEditorToolbar = new ESRI.ArcGIS.Controls.AxToolbarControl();
@@ -54,41 +53,33 @@ namespace EditingUsingCustomForm
             this.xPanderPanelList1 = new BSE.Windows.Forms.XPanderPanelList();
             this.xPanderPanel_tree = new BSE.Windows.Forms.XPanderPanel();
             this.xPanderPanel_query = new BSE.Windows.Forms.XPanderPanel();
-            this.panel_left_container = new System.Windows.Forms.Panel();
-            this.panel_right = new System.Windows.Forms.Panel();
-            this.axNavigationToolbar = new ESRI.ArcGIS.Controls.AxToolbarControl();
+            this.panel_container = new System.Windows.Forms.Panel();
+            this.panel_left = new System.Windows.Forms.Panel();
+            this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
             this.panel_title_bar = new System.Windows.Forms.Panel();
             this.close = new System.Windows.Forms.PictureBox();
             this.max = new System.Windows.Forms.PictureBox();
             this.min = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.axMapControl1)).BeginInit();
+            this.axToolbarControl1 = new ESRI.ArcGIS.Controls.AxToolbarControl();
             ((System.ComponentModel.ISupportInitialize)(this.axTOCControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axEditorToolbar)).BeginInit();
             this.panel_map_tree.SuspendLayout();
             this.xPanderPanelList1.SuspendLayout();
             this.xPanderPanel_tree.SuspendLayout();
-            this.panel_left_container.SuspendLayout();
-            this.panel_right.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axNavigationToolbar)).BeginInit();
+            this.panel_container.SuspendLayout();
+            this.panel_left.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axMapControl1)).BeginInit();
             this.panel_title_bar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axToolbarControl1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // axMapControl1
-            // 
-            this.axMapControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axMapControl1.Location = new System.Drawing.Point(0, 0);
-            this.axMapControl1.Name = "axMapControl1";
-            this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
-            this.axMapControl1.Size = new System.Drawing.Size(774, 439);
-            this.axMapControl1.TabIndex = 2;
             // 
             // axTOCControl1
             // 
@@ -96,13 +87,13 @@ namespace EditingUsingCustomForm
             this.axTOCControl1.Location = new System.Drawing.Point(0, 25);
             this.axTOCControl1.Name = "axTOCControl1";
             this.axTOCControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axTOCControl1.OcxState")));
-            this.axTOCControl1.Size = new System.Drawing.Size(198, 362);
+            this.axTOCControl1.Size = new System.Drawing.Size(198, 400);
             this.axTOCControl1.TabIndex = 12;
             // 
             // axLicenseControl1
             // 
             this.axLicenseControl1.Enabled = true;
-            this.axLicenseControl1.Location = new System.Drawing.Point(466, 278);
+            this.axLicenseControl1.Location = new System.Drawing.Point(680, 206);
             this.axLicenseControl1.Name = "axLicenseControl1";
             this.axLicenseControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axLicenseControl1.OcxState")));
             this.axLicenseControl1.Size = new System.Drawing.Size(32, 32);
@@ -110,12 +101,12 @@ namespace EditingUsingCustomForm
             // 
             // axEditorToolbar
             // 
-            this.axEditorToolbar.Location = new System.Drawing.Point(335, 153);
+            this.axEditorToolbar.Location = new System.Drawing.Point(237, 26);
             this.axEditorToolbar.Margin = new System.Windows.Forms.Padding(2);
             this.axEditorToolbar.Name = "axEditorToolbar";
             this.axEditorToolbar.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axEditorToolbar.OcxState")));
             this.axEditorToolbar.Size = new System.Drawing.Size(226, 32);
-            this.axEditorToolbar.TabIndex = 8;
+            this.axEditorToolbar.TabIndex = 12;
             // 
             // panel_map_tree
             // 
@@ -131,7 +122,7 @@ namespace EditingUsingCustomForm
             this.panel_map_tree.ColorContentPanelGradientBegin = System.Drawing.Color.Empty;
             this.panel_map_tree.ColorContentPanelGradientEnd = System.Drawing.Color.Empty;
             this.panel_map_tree.Controls.Add(this.xPanderPanelList1);
-            this.panel_map_tree.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_map_tree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_map_tree.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel_map_tree.Image = null;
             this.panel_map_tree.InnerBorderColor = System.Drawing.Color.White;
@@ -139,7 +130,7 @@ namespace EditingUsingCustomForm
             this.panel_map_tree.Location = new System.Drawing.Point(0, 0);
             this.panel_map_tree.Name = "panel_map_tree";
             this.panel_map_tree.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
-            this.panel_map_tree.Size = new System.Drawing.Size(200, 439);
+            this.panel_map_tree.Size = new System.Drawing.Size(200, 477);
             this.panel_map_tree.TabIndex = 10;
             this.panel_map_tree.Text = "功能菜单";
             // 
@@ -154,7 +145,7 @@ namespace EditingUsingCustomForm
             this.xPanderPanelList1.Name = "xPanderPanelList1";
             this.xPanderPanelList1.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
             this.xPanderPanelList1.ShowExpandIcon = true;
-            this.xPanderPanelList1.Size = new System.Drawing.Size(198, 412);
+            this.xPanderPanelList1.Size = new System.Drawing.Size(198, 450);
             this.xPanderPanelList1.TabIndex = 0;
             this.xPanderPanelList1.Text = "xPanderPanelList1";
             // 
@@ -177,7 +168,7 @@ namespace EditingUsingCustomForm
             this.xPanderPanel_tree.InnerBorderColor = System.Drawing.Color.White;
             this.xPanderPanel_tree.Name = "xPanderPanel_tree";
             this.xPanderPanel_tree.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
-            this.xPanderPanel_tree.Size = new System.Drawing.Size(198, 387);
+            this.xPanderPanel_tree.Size = new System.Drawing.Size(198, 425);
             this.xPanderPanel_tree.TabIndex = 0;
             this.xPanderPanel_tree.Text = "图层管理";
             // 
@@ -202,35 +193,37 @@ namespace EditingUsingCustomForm
             this.xPanderPanel_query.TabIndex = 1;
             this.xPanderPanel_query.Text = "牧草查询";
             // 
-            // panel_left_container
+            // panel_container
             // 
-            this.panel_left_container.Controls.Add(this.panel_map_tree);
-            this.panel_left_container.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_left_container.Location = new System.Drawing.Point(0, 102);
-            this.panel_left_container.Name = "panel_left_container";
-            this.panel_left_container.Size = new System.Drawing.Size(200, 439);
-            this.panel_left_container.TabIndex = 11;
+            this.panel_container.BackColor = System.Drawing.Color.Transparent;
+            this.panel_container.Controls.Add(this.axToolbarControl1);
+            this.panel_container.Controls.Add(this.panel_left);
+            this.panel_container.Controls.Add(this.axEditorToolbar);
+            this.panel_container.Controls.Add(this.axMapControl1);
+            this.panel_container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_container.Location = new System.Drawing.Point(0, 102);
+            this.panel_container.Name = "panel_container";
+            this.panel_container.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.panel_container.Size = new System.Drawing.Size(974, 480);
+            this.panel_container.TabIndex = 0;
+            this.panel_container.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_container_Paint);
             // 
-            // panel_right
+            // panel_left
             // 
-            this.panel_right.Controls.Add(this.axMapControl1);
-            this.panel_right.Controls.Add(this.axNavigationToolbar);
-            this.panel_right.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_right.Location = new System.Drawing.Point(200, 102);
-            this.panel_right.Name = "panel_right";
-            this.panel_right.Size = new System.Drawing.Size(774, 439);
-            this.panel_right.TabIndex = 12;
+            this.panel_left.Controls.Add(this.panel_map_tree);
+            this.panel_left.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_left.Location = new System.Drawing.Point(3, 0);
+            this.panel_left.Name = "panel_left";
+            this.panel_left.Size = new System.Drawing.Size(200, 477);
+            this.panel_left.TabIndex = 0;
             // 
-            // axNavigationToolbar
+            // axMapControl1
             // 
-            this.axNavigationToolbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
-            this.axNavigationToolbar.Location = new System.Drawing.Point(121, 26);
-            this.axNavigationToolbar.Margin = new System.Windows.Forms.Padding(2);
-            this.axNavigationToolbar.Name = "axNavigationToolbar";
-            this.axNavigationToolbar.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axNavigationToolbar.OcxState")));
-            this.axNavigationToolbar.Size = new System.Drawing.Size(32, 658);
-            this.axNavigationToolbar.TabIndex = 9;
+            this.axMapControl1.Location = new System.Drawing.Point(209, 63);
+            this.axMapControl1.Name = "axMapControl1";
+            this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
+            this.axMapControl1.Size = new System.Drawing.Size(728, 292);
+            this.axMapControl1.TabIndex = 20;
             // 
             // panel_title_bar
             // 
@@ -247,8 +240,9 @@ namespace EditingUsingCustomForm
             this.panel_title_bar.Name = "panel_title_bar";
             this.panel_title_bar.Size = new System.Drawing.Size(974, 102);
             this.panel_title_bar.TabIndex = 1;
-            this.panel_title_bar.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel_title_bar_MouseDoubleClick);
+            this.panel_title_bar.DoubleClick += new System.EventHandler(this.panel_title_bar_DoubleClick);
             this.panel_title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_title_bar_MouseDown);
+            this.panel_title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_title_bar_MouseMove);
             // 
             // close
             // 
@@ -315,16 +309,22 @@ namespace EditingUsingCustomForm
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // axToolbarControl1
+            // 
+            this.axToolbarControl1.Location = new System.Drawing.Point(513, 26);
+            this.axToolbarControl1.Name = "axToolbarControl1";
+            this.axToolbarControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axToolbarControl1.OcxState")));
+            this.axToolbarControl1.Size = new System.Drawing.Size(406, 28);
+            this.axToolbarControl1.TabIndex = 21;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(974, 541);
-            this.Controls.Add(this.panel_right);
-            this.Controls.Add(this.panel_left_container);
+            this.ClientSize = new System.Drawing.Size(974, 582);
+            this.Controls.Add(this.panel_container);
             this.Controls.Add(this.panel_title_bar);
-            this.Controls.Add(this.axEditorToolbar);
             this.Controls.Add(this.axLicenseControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -333,33 +333,31 @@ namespace EditingUsingCustomForm
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.axMapControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axTOCControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axEditorToolbar)).EndInit();
             this.panel_map_tree.ResumeLayout(false);
             this.xPanderPanelList1.ResumeLayout(false);
             this.xPanderPanel_tree.ResumeLayout(false);
-            this.panel_left_container.ResumeLayout(false);
-            this.panel_right.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axNavigationToolbar)).EndInit();
+            this.panel_container.ResumeLayout(false);
+            this.panel_left.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axMapControl1)).EndInit();
             this.panel_title_bar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axToolbarControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ESRI.ArcGIS.Controls.AxMapControl axMapControl1;
         private ESRI.ArcGIS.Controls.AxTOCControl axTOCControl1;
         private ESRI.ArcGIS.Controls.AxLicenseControl axLicenseControl1;
         private ESRI.ArcGIS.Controls.AxToolbarControl axEditorToolbar;
-        private ESRI.ArcGIS.Controls.AxToolbarControl axNavigationToolbar;
         private BSE.Windows.Forms.Panel panel_map_tree;
         private BSE.Windows.Forms.XPanderPanelList xPanderPanelList1;
         private BSE.Windows.Forms.XPanderPanel xPanderPanel_tree;
@@ -368,10 +366,12 @@ namespace EditingUsingCustomForm
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox min;
-        private System.Windows.Forms.Panel panel_left_container;
+        private System.Windows.Forms.Panel panel_container;
         private System.Windows.Forms.PictureBox max;
         private System.Windows.Forms.PictureBox close;
-        private System.Windows.Forms.Panel panel_right;
+        private ESRI.ArcGIS.Controls.AxMapControl axMapControl1;
+        private System.Windows.Forms.Panel panel_left;
+        private ESRI.ArcGIS.Controls.AxToolbarControl axToolbarControl1;
     }
 }
 

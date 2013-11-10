@@ -34,7 +34,18 @@ namespace EditingUsingCustomForm
     {
         #region private members
         private IMapControl3 m_mapControl = null;
+
+        //临时位置
+        private Point temp_point;
         #endregion
+
+        const int CS_DropSHADOW = 0x20000;
+        const int GCL_STYLE = (-26);
+        //声明Win32 API
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern int SetClassLong(IntPtr hwnd, int nIndex, int dwNewLong);
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern int GetClassLong(IntPtr hwnd, int nIndex);
 
         [DllImport("User32.dll", EntryPoint = "SendMessage")]
         private static extern int SendMessage(int hWnd, int Msg, int wParam, int lParam);
@@ -47,6 +58,7 @@ namespace EditingUsingCustomForm
         {
             InitializeComponent();
             //this.MyFormMouseDown += new MouseEventHandler(panel_title_bar_MouseDown);
+            SetClassLong(this.Handle, GCL_STYLE, GetClassLong(this.Handle, GCL_STYLE) | CS_DropSHADOW); //API函数加载，实现窗体边框阴影效果
         }
         #endregion
 
@@ -187,6 +199,8 @@ namespace EditingUsingCustomForm
         {
             if (this.WindowState == FormWindowState.Normal)
             {
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.MaximumSize = new Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height);
                 this.WindowState = FormWindowState.Maximized;
             }else {
                 this.WindowState = FormWindowState.Normal;
@@ -213,29 +227,60 @@ namespace EditingUsingCustomForm
             this.max.Location = max_point;
             Point close_point = new Point(this.Width - 40, 0);
             this.close.Location = close_point;
+            //刷新
+            this.Refresh();
         }
 
         private void panel_title_bar_MouseDown(object sender, MouseEventArgs e)
         {
-                 if (e.Button == MouseButtons.Left){
-                    ReleaseCapture();
-                    SendMessage(this.Handle.ToInt32(), 0x0112, 0xF012, 0);
-                 }
+            temp_point = new Point(e.X, e.Y);
         }
 
-        private void panel_title_bar_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void panel_title_bar_DoubleClick(object sender, EventArgs e)
         {
-            if (e.Clicks == 2) {
+           
                 if (this.WindowState == FormWindowState.Normal)
                 {
+                    this.FormBorderStyle = FormBorderStyle.None;
+                    this.MaximumSize = new Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height);
+                    //设置还原图片
+                    this.max.Image = Image.FromFile(@".\images\yuan.png");
                     this.WindowState = FormWindowState.Maximized;
                 }
                 else
                 {
+                    this.max.Image = Image.FromFile(@".\images\max.png");
                     this.WindowState = FormWindowState.Normal;
                 }
+        
+        }
+        //边框的绘制
+        private void panel_container_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics,
+                                this.panel_container.ClientRectangle,
+                                Color.LightSeaGreen,         //left
+                                1,
+                                ButtonBorderStyle.None,
+                                Color.LightSeaGreen,         //top
+                                0,
+                                ButtonBorderStyle.Solid,
+                                Color.LightSeaGreen,        //right
+                                1,
+                                ButtonBorderStyle.Solid,
+                                Color.LightSeaGreen,        //bottom
+                                1,
+                                ButtonBorderStyle.Solid);
+
+        }
+
+        private void panel_title_bar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && (e.X - temp_point.X != 0 || e.Y - temp_point.Y != 0))
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle.ToInt32(), 0x0112, 0xF012, 0);
             }
-     
         }
 
        
