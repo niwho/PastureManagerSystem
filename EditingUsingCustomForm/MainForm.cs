@@ -160,9 +160,9 @@ namespace EditingUsingCustomForm
                 }
             }
 
-            if (!success)
+           /* if (!success)
                 MessageBox.Show("Editing will not function correctly until the C# ReshapePolylineEditTask and VertexCommands samples have been compiled. More information can be found in the 'How to use' section for this sample.",
-                    "Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    "Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);*/
             
         }
 
