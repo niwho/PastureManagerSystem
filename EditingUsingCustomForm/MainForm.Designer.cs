@@ -186,6 +186,7 @@ namespace EditingUsingCustomForm
             // 
             // xPanderPanel_query
             // 
+            this.xPanderPanel_query.BackColor = System.Drawing.Color.Transparent;
             this.xPanderPanel_query.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.xPanderPanel_query.CaptionFont = new System.Drawing.Font("Î¢ÈíÑÅºÚ", 8F, System.Drawing.FontStyle.Bold);
             this.xPanderPanel_query.CaptionForeColor = System.Drawing.SystemColors.ControlText;
@@ -330,6 +331,7 @@ namespace EditingUsingCustomForm
             // 
             // pictureBox_tools1
             // 
+            this.pictureBox_tools1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_tools1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_tools1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox_tools1.Image = global::EditingUsingCustomForm.Properties.Resources.tools1;
@@ -465,13 +467,13 @@ namespace EditingUsingCustomForm
         private System.Windows.Forms.PictureBox close;
         private ESRI.ArcGIS.Controls.AxMapControl axMapControl1;
         private System.Windows.Forms.Panel panel_left;
-        private ESRI.ArcGIS.Controls.AxToolbarControl axToolbarControl1;
         private System.Windows.Forms.PictureBox pictureBox_tools1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox_query;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox_querytitle;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private ESRI.ArcGIS.Controls.AxToolbarControl axToolbarControl1;
     }
 }
 

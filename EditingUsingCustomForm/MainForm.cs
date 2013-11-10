@@ -236,7 +236,7 @@ namespace EditingUsingCustomForm
             }
             else
             {
-                this.max.Image = Image.FromFile(@".\images\yuan.png");
+                this.max.Image = Image.FromFile(@".\images\yuan.png ");
             }
         }
 
@@ -272,6 +272,8 @@ namespace EditingUsingCustomForm
             this.max.Location = max_point;
             Point close_point = new Point(this.Width - 40, 0);
             this.close.Location = close_point;
+
+
             //Ë¢ÐÂ
             this.Refresh();
         }
