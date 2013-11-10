@@ -236,7 +236,7 @@ namespace EditingUsingCustomForm
             }
             else
             {
-                this.max.Image = Image.FromFile(@".\images\yuan.png");
+                this.max.Image = Image.FromFile(@".\images\yuan.png ");
             }
         }
 
