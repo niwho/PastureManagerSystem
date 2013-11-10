@@ -192,5 +192,20 @@
   <ItemGroup>
     <None Include="images\banners.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\tools1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\tools_query_title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\tools_query.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\tools_help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\tools_help_title.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

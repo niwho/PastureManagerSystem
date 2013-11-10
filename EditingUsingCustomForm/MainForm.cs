@@ -154,7 +154,7 @@ namespace EditingUsingCustomForm
             axEditorToolbar.AddItem("esriControls.ControlsOpenDocCommand", 0, -1, false, 0, esriCommandStyles.esriCommandStyleIconOnly);
             axEditorToolbar.AddItem("esriControls.ControlsSaveAsDocCommand", 0, -1, false, 0, esriCommandStyles.esriCommandStyleIconOnly);
             axEditorToolbar.AddItem("esriControls.ControlsAddDataCommand", 0, -1, false, 0, esriCommandStyles.esriCommandStyleIconOnly);
-            axEditorToolbar.AddItem(new EditCmd(), 0, -1, false, 0, esriCommandStyles.esriCommandStyleIconOnly);
+            //axEditorToolbar.AddItem(new EditCmd(), 0, -1, false, 0, esriCommandStyles.esriCommandStyleIconOnly);
              
         }
 
