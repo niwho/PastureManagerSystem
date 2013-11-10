@@ -16,3 +16,12 @@ C:\Workspace\MyDev\proj\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomF
 C:\Workspace\MyDev\proj\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm2010.csproj.GenerateResource.Cache
 C:\Workspace\MyDev\proj\EditingUsingCustomForm\EditingUsingCustomForm.exe
 C:\Workspace\MyDev\proj\EditingUsingCustomForm\EditingUsingCustomForm.pdb
+D:\proj_mm\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.exe
+D:\proj_mm\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.pdb
+D:\proj_mm\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm2010.csprojResolveAssemblyReference.cache
+D:\proj_mm\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.MainForm.resources
+D:\proj_mm\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.EditorForm.resources
+D:\proj_mm\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm.Properties.Resources.resources
+D:\proj_mm\PastureManagerSystem\EditingUsingCustomForm\obj\x86\Debug\EditingUsingCustomForm2010.csproj.GenerateResource.Cache
+D:\proj_mm\PastureManagerSystem\EditingUsingCustomForm\EditingUsingCustomForm.exe
+D:\proj_mm\PastureManagerSystem\EditingUsingCustomForm\EditingUsingCustomForm.pdb

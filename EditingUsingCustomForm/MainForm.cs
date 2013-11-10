@@ -49,16 +49,17 @@ namespace EditingUsingCustomForm
 
             //relative file path to the sample data from EXE location
             string filePath = @".\data\USAMajorHighways";
+            filePath = @".\data\软件用图-白三叶";
  
             //Add Lakes layer
             IWorkspaceFactory workspaceFactory = new ShapefileWorkspaceFactoryClass();
             IFeatureWorkspace workspace = (IFeatureWorkspace)workspaceFactory.OpenFromFile(filePath, axMapControl1.hWnd);
             IFeatureLayer featureLayer = new FeatureLayerClass();
-            featureLayer.Name = "Lakes";
+            featureLayer.Name = "适宜区省";
             featureLayer.Visible = true;
-            featureLayer.FeatureClass = workspace.OpenFeatureClass("us_lakes");
+            featureLayer.FeatureClass = workspace.OpenFeatureClass("适宜区省");
 
-            #region create a SimplerRenderer
+            /*#region create a SimplerRenderer
             IRgbColor color = new RgbColorClass();
             color.Red = 190;
             color.Green = 232;
@@ -71,14 +72,58 @@ namespace EditingUsingCustomForm
             renderer.Symbol = sym as ISymbol;
             #endregion
 
-            ((IGeoFeatureLayer)featureLayer).Renderer = renderer as IFeatureRenderer;
+            ((IGeoFeatureLayer)featureLayer).Renderer = renderer as IFeatureRenderer;*/
             axMapControl1.Map.AddLayer((ILayer)featureLayer);
 
             //Add Highways layer
             featureLayer = new FeatureLayerClass();
-            featureLayer.Name = "Highways";
+            featureLayer.Name = "适宜区市";
             featureLayer.Visible = true;
-            featureLayer.FeatureClass = workspace.OpenFeatureClass("usa_major_highways");
+            featureLayer.FeatureClass = workspace.OpenFeatureClass("适宜区市");//usa_major_highways
+            axMapControl1.Map.AddLayer((ILayer)featureLayer);
+
+            //Add Highways layer
+            featureLayer = new FeatureLayerClass();
+            featureLayer.Name = "适宜区县";
+            featureLayer.Visible = true;
+            featureLayer.FeatureClass = workspace.OpenFeatureClass("适宜区县");//usa_major_highways
+            axMapControl1.Map.AddLayer((ILayer)featureLayer);
+
+            //Add Highways layer
+            featureLayer = new FeatureLayerClass();
+            featureLayer.Name = "次适宜省";
+            featureLayer.Visible = true;
+            featureLayer.FeatureClass = workspace.OpenFeatureClass("次适宜省");//usa_major_highways
+
+          #region create a SimplerRenderer
+          IRgbColor color = new RgbColorClass();
+          color.Red = 255;
+          color.Green = 0;
+          color.Blue = 0;
+
+          ISimpleFillSymbol sym = new SimpleFillSymbolClass();
+          sym.Color = color;
+
+          ISimpleRenderer renderer = new SimpleRendererClass();
+          renderer.Symbol = sym as ISymbol;
+          #endregion
+
+          ((IGeoFeatureLayer)featureLayer).Renderer = renderer as IFeatureRenderer;
+
+            axMapControl1.Map.AddLayer((ILayer)featureLayer);
+
+            //Add Highways layer
+            featureLayer = new FeatureLayerClass();
+            featureLayer.Name = "次适宜市";
+            featureLayer.Visible = true;
+            featureLayer.FeatureClass = workspace.OpenFeatureClass("次适宜市");//usa_major_highways
+            axMapControl1.Map.AddLayer((ILayer)featureLayer);
+
+            //Add Highways layer
+            featureLayer = new FeatureLayerClass();
+            featureLayer.Name = "次适宜县";
+            featureLayer.Visible = true;
+            featureLayer.FeatureClass = workspace.OpenFeatureClass("次适宜县");//usa_major_highways
             axMapControl1.Map.AddLayer((ILayer)featureLayer);
 
             //******** Important *************
@@ -115,9 +160,9 @@ namespace EditingUsingCustomForm
                 }
             }
 
-            if (!success)
+           /* if (!success)
                 MessageBox.Show("Editing will not function correctly until the C# ReshapePolylineEditTask and VertexCommands samples have been compiled. More information can be found in the 'How to use' section for this sample.",
-                    "Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    "Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);*/
             
         }
 
